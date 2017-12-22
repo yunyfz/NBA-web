@@ -3,18 +3,21 @@ import { Slider, InputNumber, Row, Col } from 'antd';
 
 export class CountSlider extends React.Component {
     state = {
-        inputValue: 1,
+        inputValue: 2,
     }
+
     onChange = (value) => {
         this.setState({
             inputValue: value,
         });
+        this.props.onSliderChange(value);
     }
+
     render() {
         return (
             <Row>
                 <Col span={12} offset={3}>
-                    <Slider min={1} max={20} onChange={this.onChange} value={this.state.inputValue} />
+                    <Slider min={1} max={10} onChange={this.onChange} value={this.state.inputValue} />
                 </Col>
                 <Col span={4}>
                     <InputNumber

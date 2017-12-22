@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShotChart } from './ShotChart';
 import nba from 'nba';
 import { Profile } from './Profile';
 import { DataViewContainer } from './DataViewContainer';
